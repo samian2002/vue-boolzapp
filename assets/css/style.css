@@ -1,0 +1,148 @@
+:root {
+    --header-my-contact-height: 4rem;      /* Altezza dell'header del contatto personale */
+    --header-active-contact-height: 4rem; /* Altezza dell'header del contatto attivo */
+    --banner-notification-height: 5rem;   /* Altezza del banner delle notifiche */
+    --searchbar-chat-height: 3.2rem;      /* Altezza della barra di ricerca delle chat */
+    --input-message-height: 4rem;         /* Altezza dell'input per i messaggi */
+    --body-padding-vertical: 2rem;        /* Padding verticale del corpo */
+    --my-contact-width: 22rem;            /* Larghezza della sezione dei contatti personali */
+    --background-gray: #dadbd3;           /* Colore di sfondo grigio */
+    --background-header-gray: #eaeaea;    /* Colore di sfondo grigio per gli header */
+    --background-bar-gray: #f3eeea;       /* Colore di sfondo grigio per le barre */
+    --icon-gray: #b1b1b1;                 /* Colore grigio per le icone */
+    --banner-blue: #8EDAFC;               /* Colore blu per il banner */
+    --background-active-gray: #e9ebeb;    /* Colore di sfondo grigio per gli elementi attivi */
+}
+
+
+body {
+    overflow: hidden;
+    background: linear-gradient(#009688 0%, #009688 15%, var(--background-gray) 15%, var(--background-gray) 100%);
+    padding: var(--body-padding-vertical) 0;
+}
+
+.boolzap_window {
+    height: calc(100vh - 2 * var(--body-padding-vertical));
+    overflow: hidden;
+}
+
+.my_contact {
+    width: var(--my-contact-width);
+}
+
+.contact_active {
+    width: calc(100% - var(--my-contact-width));
+    background-image: url(../img/mine.jpg);
+}
+
+.my_contact header {
+    height: var(--header-my-contact-height);
+}
+
+.my_contact .banner_notify {
+    height: var(--banner-notification-height);
+}
+
+.my_contact .searchbar_chat {
+    height: var(--searchbar-chat-height);
+}
+
+.my_contact .chat_list {
+    height: calc(100vh - var(--header-my-contact-height) - var(--banner-notification-height) - var(--banner-notification-height) - var(--body-padding-vertical));
+    overflow-y: auto;
+}
+
+.chat_list .contact_chat {
+    height: 4rem;
+}
+
+.contact_active header {
+    height: var(--header-active-contact-height);
+}
+
+.contact_active .chat {
+    height: calc(100vh - var(--header-active-contact-height) - var(--input-message-height) - 2 * var(--body-padding-vertical));
+    overflow-y: auto;
+}
+
+.contact_active .input_mex {
+    height: var(--input-message-height);
+}
+
+
+.chat .mex {
+    padding: 0.5rem 0.8rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+    width: 40%;
+}
+
+.chat .mex_my {
+    align-self: end;
+    background: #d5f9ba;
+}
+
+.chat .mex_contact {
+    background: rgb(255, 255, 255);
+}
+
+.centre_fix {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.bg_gray_header {
+    background-color: var(--background-header-gray);
+}
+
+.bg_gray_bar {
+    background-color: var(--background-bar-gray);
+}
+
+.circle_photo {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.contact_name {
+    font-weight: bold;
+}
+
+.bg_blue {
+    background-color: var(--banner-blue);
+}
+
+.text_blue {
+    color: var(--banner-blue);
+}
+
+i {
+    color: var(--icon-gray);
+}
+
+.header_my_contact i {
+    font-size: 1.5rem;
+}
+
+.fs_7 {
+    font-size: 0.8rem;
+    margin-top: -0.2rem;
+    color: var(--icon-gray);
+}
+
+.time {
+    font-size: 0.8rem;
+    color: var(--icon-gray);
+}
+
+.active {
+    background-color: var(--background-active-gray);
+}
+
